@@ -11,6 +11,8 @@ def myinit():
     global q
     q = gluNewQuadric();
     glEnable(GL_DEPTH_TEST)
+    glPolygonMode( GL_FRONT_AND_BACK, GL_LINE)
+    #glPolygonMode( GL_FRONT_AND_BACK, GL_FILL)
     
 def myresize(width, height):
     glViewport(0, 0, width, height)
@@ -29,10 +31,11 @@ def mydisplay():
 
 #    glPushMatrix()
 
-    glRotatef((3*t) % 360,0,1,0)
+    #glRotatef((3*t) % 360,0,1,0)
     glColor(0,1,1)
-    gluSphere(q,0.3,5,5)
+    gluSphere(q, 0.4, 20, 20)
 
+    """
     glRotatef(t % 360,0,1,0)
     glTranslatef(1,0,0)
     glColor3f(1,0,0)
@@ -57,6 +60,7 @@ def mydisplay():
     gluSphere(q,0.15,50,50)
 
     glPopMatrix()
+    """
 
     
 def main():
@@ -75,4 +79,5 @@ def main():
 	t += speed
 	sleep(0.01)
 
-if __name__ == "__main__": main()
+if __name__ == "__main__":
+    main()
