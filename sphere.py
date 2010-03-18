@@ -33,13 +33,15 @@ def mydisplay():
 
     #glRotatef((3*t) % 360,0,1,0)
     glColor(0,1,1)
-    gluSphere(q, 0.4, 20, 20)
+    gluSphere(q, 0.4, 20, 12)
+    
+    glRotatef((3*t) % 360,0,1,0)
+    glTranslatef(1.5, 0, 0)
+    glColor3f(1, 0, 0)
+    gluSphere(q, 0.3, 18, 12)
 
     """
     glRotatef(t % 360,0,1,0)
-    glTranslatef(1,0,0)
-    glColor3f(1,0,0)
-    gluSphere(q,0.3,50,50)
 
     glPushMatrix()
 
