@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 
 from pyglet import window
-from OpenGL.GL import *
-from OpenGL.GLU import *
+from pyglet.gl import *
 
 from time import sleep
 
@@ -32,7 +31,7 @@ def mydisplay():
 #    glPushMatrix()
 
     #glRotatef((3*t) % 360,0,1,0)
-    glColor(0,1,1)
+    glColor3f(0, 1, 1)
     gluSphere(q, 0.4, 20, 12)
     
     glRotatef((3*t) % 360,0,1,0)
